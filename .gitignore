@@ -1,0 +1,54 @@
+﻿# Tệp và thư mục được tạo bởi Visual Studio
+###################################
+*.user
+*.suo
+*.sln.docstates
+*.vspscc
+*.vssscc
+*.dotSettings
+*.resharper
+*.bak
+*.orig
+*.obj
+*.pdb
+*.pgc
+*.pgo
+.vs/
+**/.vs/
+# Thư mục build và output
+#########################
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# Thư mục Packages (NuGet)
+###########################
+packages/
+*.nupkg
+*.snk
+
+# Cấu hình IDE (Chủ yếu là Visual Studio)
+################################
+.vs/ # Thư mục chứa cấu hình cá nhân của Solution (quan trọng nhất)
+*.[Cc]ode[Cc]overage
+*.[Dd]bml
+*.[Dd]iagram
+
+# File cấu hình nhạy cảm
+#########################
+appsettings.Development.json # Thường chứa chuỗi kết nối cục bộ
+appsettings.Secret.json      # Nếu bạn tạo file riêng chứa khóa API, mật khẩu...
+
+# Logs
+#########################
+[Ll]ogs/
+*.log
+
+# Windows temp files
+#########################
+Thumbs.db
+
+# macOS files (Nếu bạn dùng máy Mac)
+#########################
+.DS_Store
