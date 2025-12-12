@@ -1,0 +1,45 @@
+﻿@page "/products"
+@inject FashionShop.Blazor.Services.ProductApiClient ProductApi
+
+<h3>Danh sách sản phẩm</h3>
+
+@if (isLoading)
+{
+    <p>Đang tải...</p>
+}
+else if (products == null || products.Count == 0)
+{
+    <p>Không có sản phẩm.</p>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+        @foreach (var p in products)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@p.ThumbnailUrl" class="card-img-top" style="height:200px;object-fit:cover" alt="@p.Name" />
+                    <div class="card-body">
+                        <h5 class="card-title">@p.Name</h5>
+                        <p class="card-text">
+                            Giá: @p.BasePrice.ToString("N0") đ<br />
+                            Giá từ: @(p.MinPrice?.ToString("N0") ?? "-") - @(p.MaxPrice?.ToString("N0") ?? "-")
+                        </p>
+                        <a class="btn btn-sm btn-primary" href="@($"/products/{p.Id}")">Xem</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<FashionShop.Contracts.Catalog.ProductDto>? products;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductApi.GetAllAsync();
+        isLoading = false;
+    }
+}

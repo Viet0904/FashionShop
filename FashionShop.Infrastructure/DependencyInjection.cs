@@ -1,4 +1,7 @@
-﻿using FashionShop.Infrastructure.Persistence;
+﻿using FashionShop.Application.Catalog;
+using FashionShop.Application.Common;
+using FashionShop.Infrastructure.Catalog;
+using FashionShop.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,9 +21,14 @@ namespace FashionShop.Infrastructure
                 options.UseSqlServer(connectionString);
             });
 
-            // Sau này sẽ AddScoped repository, service, v.v. ở đây
-            // vd:
-            // services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<Application.Auth.IAuthService, Infrastructure.Auth.AuthService>();
+
+            // Generic repository + UnitOfWork
+            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            // Services
+            services.AddScoped<IProductService, ProductService>();
 
             return services;
         }

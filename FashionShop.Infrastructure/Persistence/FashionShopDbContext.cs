@@ -336,7 +336,7 @@ namespace FashionShop.Infrastructure.Persistence
                 e.Property(x => x.Price)
                     .HasColumnType("decimal(18,2)");
 
-                e.Property(x => x.Stock)
+                e.Property(x => x.StockQuantity)
                     .IsRequired();
 
                 e.HasOne(x => x.Product)

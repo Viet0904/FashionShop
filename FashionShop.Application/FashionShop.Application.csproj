@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\FashionShop.Contracts\FashionShop.Contracts.csproj" />
     <ProjectReference Include="..\FashionShop.Domain\FashionShop.Domain.csproj" />
-    <ProjectReference Include="..\FashionShop.Infrastructure\FashionShop.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

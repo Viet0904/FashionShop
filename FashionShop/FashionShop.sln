@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Blazor", "..\FashionShop.Blazor\FashionShop.Blazor.csproj", "{1F2A2297-BEE2-4264-909C-4E3859B2EB25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Server", "..\FashionShop.Blazor\FashionShop.Server.csproj", "{1F2A2297-BEE2-4264-909C-4E3859B2EB25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Contracts", "..\FashionShop.Contracts\FashionShop.Contracts.csproj", "{F4ACE076-AC80-46C0-9F73-9C1DF244CDE8}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Api", "..\FashionShop.Api\FashionShop.Api.csproj", "{F5C8D6E2-4F4E-4403-9102-216AFDE4F627}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion.Library", "Fashion.Library\Fashion.Library.csproj", "{B08915BE-63E2-43C0-8848-1ECAF42B8C36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Blazor", "..\FashionShop.Blazor\FashionShop.Blazor.csproj", "{A1877332-2FBC-48C3-8FE1-274CA3877A71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

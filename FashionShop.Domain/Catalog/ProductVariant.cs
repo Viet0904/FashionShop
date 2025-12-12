@@ -14,7 +14,8 @@ namespace FashionShop.Domain.Catalog
         public int ColorId { get; set; }
 
         public decimal Price { get; set; }
-        public int Stock { get; set; }
+        
+        public int StockQuantity { get; set; }
 
         public Product Product { get; set; } = null!;
         public Size Size { get; set; } = null!;
