@@ -1,6 +1,8 @@
 ﻿namespace FashionShop.Blazor.Services.Products
 {
-    public class IProductApi
+    public interface IProductApi
     {
+        Task<List<ProductDto>> GetAllAsync();
     }
+
 }

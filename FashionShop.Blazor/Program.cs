@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Components.Web;
+﻿using FashionShop.Blazor.Services;
+using FashionShop.Blazor.Services.Http;
+using FashionShop.Blazor.Services.Products;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using FashionShop.Blazor.Services;
 namespace FashionShop.Blazor
 {
     public class Program
@@ -16,6 +18,9 @@ namespace FashionShop.Blazor
 
             // Register Api Clients
             builder.Services.AddScoped<ProductApiClient>();
+            builder.Services.AddScoped<ApiClient>();
+            builder.Services.AddScoped<IProductApi, ProductApi>();
+
             await builder.Build().RunAsync();
         }
     }
