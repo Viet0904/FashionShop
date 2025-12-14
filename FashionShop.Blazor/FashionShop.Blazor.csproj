@@ -16,4 +16,8 @@
     <ProjectReference Include="..\FashionShop.Contracts\FashionShop.Contracts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Admin\Categories\" />
+  </ItemGroup>
+
 </Project>

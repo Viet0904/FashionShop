@@ -1,0 +1,3 @@
+"ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=FashionShop;User Id=sa;Password=Admin@123;TrustServerCertificate=True;"
+  },

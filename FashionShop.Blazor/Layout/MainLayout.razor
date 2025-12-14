@@ -1,16 +1,28 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
+@inject IJSRuntime JS
+
+@* Wrapper chính của Template *@
+<div class="wrapper" >
+    
+    @* 1. NHÚNG THANH ĐIỀU HƯỚNG *@
+    <Nav />
+
+    @* 2. PHẦN NỘI DUNG CHÍNH (MAIN CONTENT) *@
+    <div class="main" id="main">
+        
+        @* @Body là nơi Home.razor sẽ được đặt vào *@
+        @Body 
+        
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+    @* 3. NHÚNG FOOTER *@
+    <Footer />
+    
+    @* 4. NHÚNG NÚT SCROLL TO TOP *@
+    <ScrollToTop />
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
 </div>
+
+@code {
+    
+}
