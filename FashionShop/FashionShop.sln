@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Api", "..\FashionShop.Api\FashionShop.Api.csproj", "{F5C8D6E2-4F4E-4403-9102-216AFDE4F627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion.Library", "Fashion.Library\Fashion.Library.csproj", "{B08915BE-63E2-43C0-8848-1ECAF42B8C36}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionShop.Blazor", "..\FashionShop.Blazor\FashionShop.Blazor.csproj", "{A1877332-2FBC-48C3-8FE1-274CA3877A71}"
 EndProject
 Global
@@ -43,10 +41,6 @@ Global
 		{F5C8D6E2-4F4E-4403-9102-216AFDE4F627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5C8D6E2-4F4E-4403-9102-216AFDE4F627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5C8D6E2-4F4E-4403-9102-216AFDE4F627}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B08915BE-63E2-43C0-8848-1ECAF42B8C36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1877332-2FBC-48C3-8FE1-274CA3877A71}.Release|Any CPU.ActiveCfg = Release|Any CPU

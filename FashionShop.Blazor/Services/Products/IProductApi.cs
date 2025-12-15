@@ -1,4 +1,6 @@
-﻿namespace FashionShop.Blazor.Services.Products
+﻿using FashionShop.Contracts.Catalog;
+
+namespace FashionShop.Blazor.Services.Products
 {
     public interface IProductApi
     {
