@@ -1,5 +1,79 @@
-﻿<h3>AdminLayout</h3>
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <AdminTopbar />
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <AdminSidebar />
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <div class="page-body">
+                                    @Body
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
+    private bool _isResourceLoaded = false;
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                // 1. Load CSS Admin
+                await JS.InvokeVoidAsync("adminAssetManager.loadCss", "admin/css/bootstrap.min.css");
+                await JS.InvokeVoidAsync("adminAssetManager.loadCss", "admin/icon/feather/css/feather.css");
+                await JS.InvokeVoidAsync("adminAssetManager.loadCss", "admin/css/style.css");
+                await JS.InvokeVoidAsync("adminAssetManager.loadCss", "admin/css/jquery.mCustomScrollbar.css");
+
+                // 2. Load JS Admin - Core Libraries
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/jquery.min.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/jquery-ui.min.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/popper.min.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/bootstrap.min.js");
+
+                // 3. JS Plugins
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/jquery.slimscroll.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/modernizr.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/css-scrollbars.js");
+
+
+                // 4. Template Logic (Sidebar, Layout)
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/SmoothScroll.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/pcoded.min.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/vartical-layout.min.js");
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/jquery.mCustomScrollbar.concat.min.js");
+
+                // Initialize UI
+                await JS.InvokeVoidAsync("adminAssetManager.loadScript", "admin/js/script.js");
+
+                _isResourceLoaded = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Admin UI Load Error: {ex.Message}");
+            }
+        }
+    }
+    public async ValueTask DisposeAsync()
+    {
+        if (_isResourceLoaded)
+        {
+            await JS.InvokeVoidAsync("adminAssetManager.unloadAdminCss");
+        }
+    }
 }

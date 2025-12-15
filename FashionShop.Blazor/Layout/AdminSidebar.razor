@@ -1,5 +1,37 @@
-﻿<h3>AdminSidebar</h3>
+﻿<nav class="pcoded-navbar">
+    <div class="pcoded-inner-navbar main-menu">
+        <div class="pcoded-navigatio-lavel">Navigation</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="active">
+                <a href="/admin/dashboard">
+                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                    <span class="pcoded-mtext">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                    <span class="pcoded-mtext">Quản lý sản phẩm</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="/admin/products">
+                            <span class="pcoded-mtext">Danh sách</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/admin/products/create">
+                            <span class="pcoded-mtext">Thêm mới</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
 
 @code {
-
 }
+
